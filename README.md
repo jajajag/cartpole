@@ -50,7 +50,7 @@ Standard DQN with Experience Replay.
 * **MSE** loss function
 * **Adam** optimizer
 
-### Large DNN structure:
+### Small DNN structure:
 
 1. Dense layer - input: **4**, output: **24**, activation: **relu**
 2. Dense layer - input **24**, output: **2**, activation: **linear**
