@@ -10,6 +10,12 @@ from keras.optimizers import Adam
 
 from scores.score_logger import ScoreLogger
 
+# The parameters for save_path to models, if the reward is positive
+# Using small dnn or large dnn
+MODEL_DIR = "models/"
+NEG_REWARD = False
+LARGE_DNN = True
+
 ENV_NAME = "CartPole-v1"
 
 GAMMA = 0.95
@@ -33,7 +39,8 @@ class DQNSolver:
 
         self.model = Sequential()
         self.model.add(Dense(24, input_shape=(observation_space,), activation="relu"))
-        # self.model.add(Dense(24, activation="relu"))
+        if LARGE_DNN:
+            self.model.add(Dense(24, activation="relu"))
         self.model.add(Dense(self.action_space, activation="linear"))
         self.model.compile(loss="mse", optimizer=Adam(lr=LEARNING_RATE))
 
@@ -79,7 +86,9 @@ def cartpole():
             #env.render()
             action = dqn_solver.act(state)
             state_next, reward, terminal, info = env.step(action)
-            # reward = -reward
+            # If we learn the model with negative reward
+            if NEG_REWARD:
+                reward = -reward
             reward = reward if not terminal else -reward
             state_next = np.reshape(state_next, [1, observation_space])
             dqn_solver.remember(state, action, reward, state_next, terminal)
@@ -87,13 +96,14 @@ def cartpole():
             if terminal:
                 print("Run: " + str(run) + ", exploration: " + str(dqn_solver.exploration_rate) + ", score: " + str(step))
                 score_logger.add_score(step, run)
+                # Save best model
                 if step > best_score:
                     best_score = step
-                    with open("model/memory", "wb") as fp:
+                    with open(MODEL_DIR + "memory", "wb") as fp:
                         pickle.dump((dqn_solver.action_space,
                                      dqn_solver.memory,
                                      dqn_solver.exploration_rate), fp)
-                    dqn_solver.model.save("model/model")
+                    dqn_solver.model.save(MODEL_DIR + "model")
                 break
             dqn_solver.experience_replay()
 

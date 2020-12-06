@@ -1,0 +1,27 @@
+dqn_l model with 2 frames and neg_reward = False ends in 29 steps.
+dqn_l model with 2 frames and random_action = False ends in 29 steps.
+dqn_l model with 2 frames and random_action = True ends in 120 steps.
+
+dqn_l model with 4 frames and neg_reward = False ends in 160 steps.
+dqn_l model with 4 frames and random_action = False ends in 257 steps.
+dqn_l model with 4 frames and random_action = True ends in 135 steps.
+
+dqn_l model with 8 frames and neg_reward = False ends in 171 steps.
+dqn_l model with 8 frames and random_action = False ends in 426 steps.
+dqn_l model with 8 frames and random_action = True ends in 300 steps.
+
+dqn_l model with 16 frames and neg_reward = False ends in 161 steps.
+dqn_l model with 16 frames and random_action = False ends in 335 steps.
+dqn_l model with 16 frames and random_action = True ends in 345 steps.
+
+dqn_l model with 32 frames and neg_reward = False ends in 281 steps.
+dqn_l model with 32 frames and random_action = False ends in 315 steps.
+dqn_l model with 32 frames and random_action = True ends in 350 steps.
+
+dqn_l model with 64 frames and neg_reward = False ends in 342 steps.
+dqn_l model with 64 frames and random_action = False ends in 325 steps.
+dqn_l model with 64 frames and random_action = True ends in 343 steps.
+
+dqn_l model with 1000 frames and neg_reward = False ends in 357 steps.
+dqn_l model with 1000 frames and random_action = False ends in 357 steps.
+dqn_l model with 1000 frames and random_action = True ends in 357 steps.
