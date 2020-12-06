@@ -13,11 +13,16 @@ python3 test_action.py --random_action True --num_frames 32
 
 ```
 
-Results are save in results/ directory.
+Results can be found in results/ directory.
 
-# Strategically Timed Attack
+# Implementation Details
 
+## Strategically Timed Attack
 
+Ideas from Tactics of Adversarial Attack on Deep Reinforcement Learning Agents.
+
+* When to attack: Find frame with lowest c function value. The fake agent will move to the next state using its own policy.
+* How to attack: Lowest Q value for positive model / Highest Q value for negative model
 
 ## Cartpole
 
@@ -55,21 +60,21 @@ Standard DQN with Experience Replay.
 
 ## Results
 
-##### Example trial gif
+##### result\_models
 
 <img src="results/result_models.png">
 
-##### Example trial chart
+##### result\_frame
 
 <img src="results/result_frame.png">
 
-##### Solved trials chart
+##### result\_action
 
 <img src="results/result_action.png">
 
-##### Solved trials chart
+##### result\_inverse
 
 <img src="results/result_inverse.png">
 
 ## DQN Code Forked From
-[**GITHUB**](https://github.com/gsurma/cartpole)
+[gsurma/cartpole](https://github.com/gsurma/cartpole)
