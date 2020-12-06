@@ -1,0 +1,23 @@
+dqn_l model with 2 frames and neg_reward = False ends in 29 steps.
+dqn_l model with 4 frames and neg_reward = False ends in 154 steps.
+dqn_l model with 8 frames and neg_reward = False ends in 158 steps.
+dqn_l model with 16 frames and neg_reward = False ends in 167 steps.
+dqn_l model with 32 frames and neg_reward = False ends in 168 steps.
+dqn_l model with 64 frames and neg_reward = False ends in 170 steps.
+dqn_l model with 1000 frames and neg_reward = False ends in 170 steps.
+
+dqn_ns model with 2 frames and neg_reward = True ends in 29 steps.
+dqn_ns model with 4 frames and neg_reward = True ends in 155 steps.
+dqn_ns model with 8 frames and neg_reward = True ends in 162 steps.
+dqn_ns model with 16 frames and neg_reward = True ends in 168 steps.
+dqn_ns model with 32 frames and neg_reward = True ends in 170 steps.
+dqn_ns model with 64 frames and neg_reward = True ends in 170 steps.
+dqn_ns model with 1000 frames and neg_reward = True ends in 170 steps.
+
+dqn_s model with 2 frames and neg_reward = False ends in 29 steps.
+dqn_s model with 4 frames and neg_reward = False ends in 11 steps.
+dqn_s model with 8 frames and neg_reward = False ends in 9 steps.
+dqn_s model with 16 frames and neg_reward = False ends in 9 steps.
+dqn_s model with 32 frames and neg_reward = False ends in 9 steps.
+dqn_s model with 64 frames and neg_reward = False ends in 9 steps.
+dqn_s model with 1000 frames and neg_reward = False ends in 170 steps.
